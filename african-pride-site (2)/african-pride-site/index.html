@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="African Pride — Rooted in Heritage. Premium streetwear celebrating African motherhood and culture.">
+  <title>African Pride | Rooted in Heritage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo" aria-label="African Pride — home"><img src="images/logo.png" alt="African Pride" width="64" height="53"></a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#featured" class="nav__link">Featured</a></li>
+        <li><a href="#collection" class="nav__link">Collection</a></li>
+        <li><a href="#story" class="nav__link">Our Story</a></li>
+        <li><a href="#newsletter" class="nav__link">Newsletter</a></li>
+      </ul>
+
+      <button class="nav__cart" id="cart-toggle" aria-label="Open cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="nav__cart-count" id="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu__links">
+      <li><a href="#featured" class="mobile-menu__link">Featured</a></li>
+      <li><a href="#collection" class="mobile-menu__link">Collection</a></li>
+      <li><a href="#story" class="mobile-menu__link">Our Story</a></li>
+      <li><a href="#newsletter" class="mobile-menu__link">Newsletter</a></li>
+    </ul>
+  </div>
+
+  <!-- Cart drawer -->
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="cart-drawer__overlay" id="cart-overlay"></div>
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title">Your Cart</h2>
+        <button class="cart-drawer__close" id="cart-close" aria-label="Close cart">&times;</button>
+      </div>
+      <ul class="cart-drawer__items" id="cart-items"></ul>
+      <div class="cart-drawer__footer">
+        <div class="cart-drawer__subtotal">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <button class="btn btn--primary btn--full" disabled>Checkout</button>
+        <p class="cart-drawer__note">Client-side demo — no payment processing.</p>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="hero__tagline">Rooted in Heritage</p>
+          <h1 class="hero__headline">Wear Your Heritage</h1>
+          <p class="hero__subhead">
+            A limited drop celebrating the strength of African motherhood — 
+            the silhouette of a mother grinding grain, baby on her back, 
+            the continent woven into her headscarf. Premium crew-neck tees 
+            and tanks, crafted for those who carry their roots with pride.
+          </p>
+          <div class="hero__actions">
+            <a href="#collection" class="btn btn--primary">Shop the Collection</a>
+            <a href="#story" class="btn btn--outline">Learn the Story</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="slideshow" id="hero-slideshow" aria-roledescription="carousel" aria-label="African Pride photos">
+            <img class="slideshow__slide is-active" src="images/hero-man-and-woman.webp" alt="Models wearing the African Pride navy collar tee" width="640" height="800" fetchpriority="high">
+            <img class="slideshow__slide" src="images/slide-man.webp" alt="Man wearing the African Pride navy collar tee" width="640" height="800">
+            <img class="slideshow__slide" src="images/slide-woman.webp" alt="Woman wearing the African Pride navy collar tee" width="640" height="800">
+            <button class="slideshow__btn slideshow__btn--prev" aria-label="Previous photo">&#8249;</button>
+            <button class="slideshow__btn slideshow__btn--next" aria-label="Next photo">&#8250;</button>
+            <div class="slideshow__dots" role="group" aria-label="Choose photo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Featured Drop</h2>
+          <p class="section__subtitle">Hand-picked pieces from our debut collection.</p>
+        </div>
+        <div class="product-grid product-grid--featured" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <!-- Full Collection -->
+    <section class="section section--alt" id="collection">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Full Collection</h2>
+          <p class="section__subtitle">Every colorway. One powerful silhouette.</p>
+        </div>
+        <div class="product-grid product-grid--collection" id="collection-grid"></div>
+      </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section class="section story" id="story">
+      <div class="container story__inner">
+        <div class="story__visual">
+          <img src="images/story-design.webp" alt="African Pride silhouette design — mother grinding grain with baby on back, African continent in headscarf" class="story__image" width="560" height="560">
+        </div>
+        <div class="story__content">
+          <p class="story__eyebrow">The Design</p>
+          <h2 class="story__title">More Than a Graphic.<br>A Legacy.</h2>
+          <p class="story__text">
+            The African Pride silhouette tells a story older than borders. A mother 
+            grinding grain with mortar and pestle — the daily rhythm of sustenance 
+            and survival. Her baby wrapped securely on her back, carried forward 
+            through every generation. Her headscarf flows into the outline of the 
+            African continent itself, a reminder that heritage is not worn lightly — 
+            it is lived, passed down, and honored.
+          </p>
+          <p class="story__text">
+            The cursive "Ray" signature on the chest is a mark of authenticity. 
+            The distressed "AFRICAN ROOT — Rooted in Heritage" stamp on select 
+            colorways speaks to roots that run deep. Every tee is a canvas for 
+            identity — minimal on the surface, monumental in meaning.
+          </p>
+          <a href="#collection" class="btn btn--primary">Explore the Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- As Worn By -->
+    <section class="section worn-by" id="worn-by">
+      <div class="container">
+        <h2 class="worn-by__title">As Worn By</h2>
+        <div class="worn-by__strip">
+          <blockquote class="worn-by__quote">
+            <p>"This isn't just streetwear — it's a statement. I wear it because my story matters."</p>
+            <cite>— Amara K., Lagos</cite>
+          </blockquote>
+          <blockquote class="worn-by__quote">
+            <p>"The design stopped me in my tracks. Premium quality, powerful message."</p>
+            <cite>— David M., London</cite>
+          </blockquote>
+          <blockquote class="worn-by__quote">
+            <p>"Finally, a brand that gets it. Rooted in Heritage hits different."</p>
+            <cite>— Zola N., Johannesburg</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+      <div class="container newsletter__inner">
+        <div class="newsletter__content">
+          <h2 class="newsletter__title">Stay Rooted</h2>
+          <p class="newsletter__text">Be first to know about drops, restocks, and stories from the community.</p>
+        </div>
+        <form class="newsletter__form" id="newsletter-form">
+          <input type="email" class="newsletter__input" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo" aria-label="African Pride — home"><img src="images/logo-light.png" alt="African Pride" width="120" height="99"></a>
+        <p class="footer__tagline">Rooted in Heritage</p>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__links">
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <a href="#" class="footer__social-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Twitter / X">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="TikTok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 African Pride. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/data/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/slideshow.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
